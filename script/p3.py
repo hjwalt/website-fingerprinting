@@ -20,8 +20,8 @@ from scipy.spatial.distance import hamming, cityblock, euclidean
 from svm.svmTrain import get_data, accuracy
 
 processedpath = "data/processed"
-svmprocesseddata = "data/svm/p3.txt"
-svmtestdata = "data/svm/t3.txt"
+svmprocesseddata = "data/extracted/p3.txt"
+svmtestdata = "data/extracted/t3.txt"
 
 # Feature Extration from JSON data
 jsonfiles = [f for f in os.listdir(processedpath) if os.path.isfile(os.path.join(processedpath, f))]

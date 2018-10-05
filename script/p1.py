@@ -8,8 +8,8 @@ from feature.outgoingPacketSize import generateFeature as generateOutgoingPacket
 from svm.svmTrain import svmTrain2, twopowerrange
 
 processedpath = "data/processed"
-svmprocesseddata = "data/svm/p1.txt"
-svmtestdata = "data/svm/t1.txt"
+svmprocesseddata = "data/extracted/p1.txt"
+svmtestdata = "data/extracted/t1.txt"
 
 # Feature Extration from JSON data
 jsonfiles = [f for f in os.listdir(processedpath) if os.path.isfile(os.path.join(processedpath, f))]
