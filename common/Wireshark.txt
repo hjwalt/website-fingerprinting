@@ -1,0 +1,2 @@
+Wireshark Filter
+((ip.src == 192.168.0.0/16 && ip.dst == 157.240.0.0/16) || (ip.dst == 192.168.0.0/16 && ip.src == 157.240.0.0/16)) && not dns && not ntp && not mdns
