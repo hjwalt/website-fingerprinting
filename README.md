@@ -4,6 +4,6 @@ This project contains implementations based on multiple research papers on websi
 
 This project is not meant to be a 100% accurate implementation of the technique presented in the papers, but it should be approximate the result of an accurate implementation of the technique.
 
-Paper 1: Website Fingerprinting at Internet Scale, Pachenko et al.
-Paper 2: Touching from a Distance: Website Fingerprinting Attacks and Defenses, Cai et al.
-Paper 3: k-fingerprinting: a Robust Scalable Website Fingerprinting Technique, Hayes et al.
+Paper 1: Website Fingerprinting at Internet Scale, Pachenko et al.\
+Paper 2: Touching from a Distance: Website Fingerprinting Attacks and Defenses, Cai et al.\
+Paper 3: k-fingerprinting: a Robust Scalable Website Fingerprinting Technique, Hayes et al.\
