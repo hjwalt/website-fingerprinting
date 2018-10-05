@@ -8,6 +8,7 @@ from feature.incomingPacketCountFraction import generateFeature as generateIncom
 from feature.outgoingPacketCountFraction import generateFeature as generateOutgoingPacketCountFractionFeature
 from feature.packetOrdering import generateFeature as generatePacketOrderingFeature
 from feature.outgoingPacketConcentration import generateFeature as generateOutgoingPacketConcentrationFeature
+from feature.edgePacketConcentration import generateFeature as generateEdgePacketConcentrationFeature
 
 from sklearn import svm
 from sklearn.externals.joblib import Memory
@@ -27,7 +28,8 @@ svmtestdata = "data/extracted/t3.txt"
 jsonfiles = [f for f in os.listdir(processedpath) if os.path.isfile(os.path.join(processedpath, f))]
 jsonfiles.sort()
 
-sliceSize = 100
+sliceSize = 750
+featureSliceSize = 750
 
 trainTreshold = 20
 testTreshold = 30
@@ -51,11 +53,12 @@ with open(svmprocesseddata, 'w') as svmout:
                 feature.extend(generateOutgoingPacketCountFractionFeature(data))
                 feature.extend(generatePacketOrderingFeature(data))
                 feature.extend(generateOutgoingPacketConcentrationFeature(data))
+                feature.extend(generateEdgePacketConcentrationFeature(data))
                 
                 if(int(data['instance']) < trainTreshold):
-                    svmout.write(data['subclass'] + ' '  + ' '.join(['%d:%s' % (i+1, el) for i,el in enumerate(feature[:sliceSize])]) + ' # ' + data['instance'] + '\n')
+                    svmout.write(data['subclass'] + ' '  + ' '.join(['%d:%s' % (i+1, el) for i,el in enumerate(feature[:featureSliceSize])]) + ' # ' + data['instance'] + '\n')
                 elif(int(data['instance']) < testTreshold):
-                    testout.write(data['subclass'] + ' '  + ' '.join(['%d:%s' % (i+1, el) for i,el in enumerate(feature[:sliceSize])]) + ' # ' + data['instance'] + '\n')
+                    testout.write(data['subclass'] + ' '  + ' '.join(['%d:%s' % (i+1, el) for i,el in enumerate(feature[:featureSliceSize])]) + ' # ' + data['instance'] + '\n')
                 else:
                     continue
 
