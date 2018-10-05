@@ -1,5 +1,4 @@
-from parser.extractPcapScapy import parsePcap as parsePcapScapy
-from parser.extractPcapDpkt import parsePcap as parsePcapDpkt
+from extractPcapScapy import parsePcap as parsePcapScapy
 import os, re, json
 
 justifySize = 15

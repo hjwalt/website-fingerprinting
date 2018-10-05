@@ -1,5 +1,5 @@
 from data.generateData import sniffData
-from parser.extractPcap import parseAndGenerateJson
+from data.extractPcap import parseAndGenerateJson
 
 urlpath = "data/urls.txt"
 className = "facebook"
