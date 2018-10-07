@@ -12,6 +12,7 @@ from feature.edgePacketConcentration import generateFeature as generateEdgePacke
 from feature.packetPerSecond import generateFeature as generatePacketPerSecondFeature
 from feature.outgoingPacketConcentrationSubset import generateFeature as generateOutgoingPacketConcentrationSubsetFeature
 from feature.packetPerSecondSubset import generateFeature as generatePacketPerSecondSubsetFeature
+from feature.interArrivalTime import generateFeature as generateInterArrivalTimeFeature
 
 from sklearn import svm
 from sklearn.externals.joblib import Memory
@@ -60,6 +61,7 @@ with open(svmprocesseddata, 'w') as svmout:
                 feature.extend(generatePacketPerSecondFeature(data))
                 feature.extend(generateOutgoingPacketConcentrationSubsetFeature(data))
                 feature.extend(generatePacketPerSecondSubsetFeature(data))
+                feature.extend(generateInterArrivalTimeFeature(data))
                 
                 if(int(data['instance']) < trainTreshold):
                     svmout.write(data['subclass'] + ' '  + ' '.join(['%d:%s' % (i+1, el) for i,el in enumerate(feature[:featureSliceSize])]) + ' # ' + data['instance'] + '\n')
@@ -103,6 +105,8 @@ for i, instance in enumerate(test_leaf):
 
 hammingAccuracy = float(trueCount) / (trueCount + falseCount)
 print "Accuracy ", hammingAccuracy * 100, "%"
+
+print model.feature_importances_
 
 endtime = time.time()
 
