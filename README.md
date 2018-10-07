@@ -23,4 +23,5 @@ selenium\
 scikit-learn\
 numpy\
 pyxdameraulevenshtein\
-matplotlib
+matplotlib\
+scapy
