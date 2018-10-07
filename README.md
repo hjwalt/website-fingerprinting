@@ -13,6 +13,7 @@ Paper 3: k-fingerprinting: a Robust Scalable Website Fingerprinting Technique, H
 Requirement for TOR sniffing:\
 TOR browser 7.5.6\
 Geckodriver 0.17
+tbselenium
 
 Requirement for Firefox sniffing:\
 Geckodriver latest version
