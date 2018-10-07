@@ -1,8 +1,8 @@
 import numpy
 
-def generateFeature(data):
+def generateFeatureFromPackets(packets):
     feature = []
-    dataLength = len(data["packets"])
+    dataLength = len(packets)
     chunkSize = 20
     chunkCount = dataLength / chunkSize
     outgoingPacketCountInChunk = []
@@ -10,7 +10,7 @@ def generateFeature(data):
         currentChunkCount = 0
         for j in range(chunkSize):
             dataIndex = (i * chunkSize) + j
-            if(data["packets"][dataIndex]['direction'] == "request"):    
+            if(packets[dataIndex]['direction'] == "request"):    
                 currentChunkCount += 1
         outgoingPacketCountInChunk.append(currentChunkCount)
     feature.append(numpy.std(outgoingPacketCountInChunk))
@@ -18,3 +18,6 @@ def generateFeature(data):
     feature.append(numpy.median(outgoingPacketCountInChunk))
     feature.append(numpy.max(outgoingPacketCountInChunk))
     return feature
+
+def generateFeature(data):
+    return generateFeatureFromPackets(data['packets'])
