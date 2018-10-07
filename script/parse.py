@@ -1,11 +1,11 @@
 from data.extractPcap import parseAndGenerateJson
 
-browser = "firefox"
+browser = "tor"
 
 path = "data/" + browser + "/raw"
 processedpath = "data/" + browser + "/processed"
 
 localSource = "192.168.0.0/16"
-facebookTarget = ["31.13.0.0/16", "157.240.0.0/16"]
+facebookTarget = ["0.0.0.0/32"]
 
 parseAndGenerateJson(path, processedpath,localSource,facebookTarget)
