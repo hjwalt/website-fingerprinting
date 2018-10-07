@@ -11,6 +11,7 @@ from feature.outgoingPacketConcentration import generateFeature as generateOutgo
 from feature.edgePacketConcentration import generateFeature as generateEdgePacketConcentrationFeature
 from feature.packetPerSecond import generateFeature as generatePacketPerSecondFeature
 from feature.outgoingPacketConcentrationSubset import generateFeature as generateOutgoingPacketConcentrationSubsetFeature
+from feature.packetPerSecondSubset import generateFeature as generatePacketPerSecondSubsetFeature
 
 from sklearn import svm
 from sklearn.externals.joblib import Memory
@@ -58,6 +59,7 @@ with open(svmprocesseddata, 'w') as svmout:
                 feature.extend(generateEdgePacketConcentrationFeature(data))
                 feature.extend(generatePacketPerSecondFeature(data))
                 feature.extend(generateOutgoingPacketConcentrationSubsetFeature(data))
+                feature.extend(generatePacketPerSecondSubsetFeature(data))
                 
                 if(int(data['instance']) < trainTreshold):
                     svmout.write(data['subclass'] + ' '  + ' '.join(['%d:%s' % (i+1, el) for i,el in enumerate(feature[:featureSliceSize])]) + ' # ' + data['instance'] + '\n')

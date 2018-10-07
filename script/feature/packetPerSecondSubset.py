@@ -1,5 +1,5 @@
 import numpy
-from outgoingPacketConcentration import generateFeatureFromPackets
+from packetPerSecond import generateFeatureFromPackets
 
 def split(l, n):
     subsetSize = len(l) / n
