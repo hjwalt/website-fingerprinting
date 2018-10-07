@@ -63,7 +63,7 @@ def generateDataTor(url, filename, delay):
     print "Starting capture"
     thread1 = subprocess.Popen(shlex.split("tcpdump 'tcp' -w " + filename))
 
-    thread2 = FirefoxBrowserThread("Thread-2", url)
+    thread2 = TorBrowserThread("Thread-2", url)
     thread2.start()
 
     time.sleep(delay)
