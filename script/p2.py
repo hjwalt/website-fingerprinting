@@ -27,9 +27,9 @@ def proxy_kernel(X, Y, K=radial_basis):
             gram_matrix[i, j] = K(x, y)
     return gram_matrix
 
-processedpath = "data/processed"
-svmprocesseddata = "data/extracted/p2.txt"
-svmtestdata = "data/extracted/t2.txt"
+processedpath = "data/firefox/processed"
+svmprocesseddata = "data/firefox/extracted/p2.txt"
+svmtestdata = "data/firefox/extracted/t2.txt"
 
 # Feature Extration from JSON data
 jsonfiles = [f for f in os.listdir(processedpath) if os.path.isfile(os.path.join(processedpath, f))]
