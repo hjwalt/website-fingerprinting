@@ -6,7 +6,7 @@ urlpath = "data/urls.txt"
 className = "facebook"
 instanceCount = 30
 startingIndex = 0
-endingIndex = 25
+endingIndex = 5
 
 sniffTor(urlpath, className, instanceCount, startingIndex, endingIndex, 30, 60, 600)
 

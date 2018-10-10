@@ -102,7 +102,7 @@ def sniffTor(urlpath, className, instanceCount, startingIndex, endingIndex, inst
                 continue
             print "Generating data for ", url
             for j in range(0, instanceCount):
-                generateDataTor(url, "data/tor/raw/" + className + "-" + str(i) + "-" + str(j) + ".pcapng", instanceWait)
+                generateDataTor(url, "/home/dev/website-fingerprinting/data/tor/raw/" + className + "-" + str(i) + "-" + str(j) + ".pcapng", instanceWait)
                 time.sleep(instanceDelay)
             time.sleep(urlDelay)
             i += 1

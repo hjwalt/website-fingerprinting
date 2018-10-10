@@ -89,6 +89,8 @@ test_leaf = zip(model.apply(xcrossvalidate), ycrossvalidate)
 trueCount = 0
 falseCount = 0
 
+print test_leaf[0][0]
+
 for i, instance in enumerate(test_leaf):
     temp = []
     for item in train_leaf:
