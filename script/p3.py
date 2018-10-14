@@ -24,7 +24,7 @@ from scipy.spatial.distance import hamming, cityblock, euclidean
 
 from svm.svmTrain import get_data, accuracy
 
-browser = "tor"
+browser = "firefox"
 
 processedpath = "data/" + browser + "/processed"
 svmprocesseddata = "data/" + browser + "/extracted/p3.txt"
@@ -91,8 +91,6 @@ test_leaf = zip(model.apply(xcrossvalidate), ycrossvalidate)
 trueCount = 0
 falseCount = 0
 
-print test_leaf[0][0]
-
 for i, instance in enumerate(test_leaf):
     temp = []
     for item in train_leaf:
@@ -110,7 +108,70 @@ for i, instance in enumerate(test_leaf):
 hammingAccuracy = float(trueCount) / (trueCount + falseCount)
 print "Accuracy ", hammingAccuracy * 100, "%"
 
-print model.feature_importances_
+feature_label = [
+    "Total Packet Count",
+    "Incoming Packet Count",
+    "Outgoing Packet Count",
+    "Incoming Packet Fraction",
+    "Outgoing Packet Fraction",
+    "Outgoing Packet Ordering Standard Deviation",
+    "Outgoing Packet Ordering Mean",
+    "Incoming Packet Ordering Standard Deviation",
+    "Incoming Packet Ordering Mean",
+    "Outgoing Packet Concentration Standard Deviation",
+    "Outgoing Packet Concentration Mean",
+    "Outgoing Packet Concentration Median",
+    "Outgoing Packet Concentration Max",
+    "Starting Packet Concentration Incoming",
+    "Starting Packet Concentration Outgoing",
+    "Ending Packet Concentration Incoming",
+    "Ending Packet Concentration Outgoing",
+    "Packet Per Second Standard Deviation",
+    "Packet Per Second Mean",
+    "Packet Per Second Median",
+    "Packet Per Second Min",
+    "Packet Per Second Max",
+]
+
+for i in range(20):
+    feature_label.extend([
+        "Subset " + str(i) + " Outgoing Packet Concentration Standard Deviation",
+        "Subset " + str(i) + " Outgoing Packet Concentration Mean",
+        "Subset " + str(i) + " Outgoing Packet Concentration Median",
+        "Subset " + str(i) + " Outgoing Packet Concentration Max"
+    ])
+
+for i in range(20):
+    feature_label.extend([    
+        "Subset " + str(i) + " Packet Per Second Standard Deviation",
+        "Subset " + str(i) + " Packet Per Second Mean",
+        "Subset " + str(i) + " Packet Per Second Median",
+        "Subset " + str(i) + " Packet Per Second Min",
+        "Subset " + str(i) + " Packet Per Second Max",
+    ])
+    
+feature_label.extend([
+    "Inter Arrival Time Max",
+    "Inter Arrival Time Mean",
+    "Inter Arrival Time Standard Deviation",
+    "Inter Arrival Time 75 Percentile"
+])
+
+feature_rank = []
+for i in range(model.feature_importances_.shape[0]):
+    feature_rank.append({"importance":model.feature_importances_[i], "label":feature_label[i]})
+
+def takeSecond(elem):
+    return elem["importance"]
+
+feature_rank.sort(key=takeSecond, reverse=True)
+
+
+justifySize = 15
+
+print "rank".ljust(justifySize), "importance".ljust(30), "label".ljust(30)
+for i in range(len(feature_label)):
+    print str(i+1).ljust(justifySize), str(feature_rank[i]["importance"]).ljust(30), feature_rank[i]["label"].ljust(30)
 
 endtime = time.time()
 
