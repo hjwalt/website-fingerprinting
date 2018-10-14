@@ -7,7 +7,7 @@ from feature.incomingPacketSize import generateFeature as generateIncomingPacket
 from feature.outgoingPacketSize import generateFeature as generateOutgoingPacketSizeFeature
 from svm.svmTrain import svmTrain2, twopowerrange
 
-browser = "tor"
+browser = "firefox"
 
 processedpath = "data/" + browser + "/processed"
 svmprocesseddata = "data/" + browser + "/extracted/p1.txt"
@@ -17,7 +17,7 @@ svmtestdata = "data/" + browser + "/extracted/t1.txt"
 jsonfiles = [f for f in os.listdir(processedpath) if os.path.isfile(os.path.join(processedpath, f))]
 jsonfiles.sort()
 
-sliceSize = 100
+sliceSize = 104
 
 trainTreshold = 20
 testTreshold = 30

@@ -6,23 +6,23 @@ from svm.svmTrain import get_data, twopowerrange, accuracy
 import matplotlib.pyplot as plt
 from visual.plot import plot, transform
 
-processedpath = "data/processed"
-svmprocesseddata = "data/svm/p2.txt"
-svmtestdata = "data/svm/t2.txt"
+browser = "firefox"
+paper = "3"
 
-# Feature Extration from JSON data
-sliceSize = 100
+processedpath = "data/" + browser + "/processed"
+svmprocesseddata = "data/" + browser + "/extracted/p" + paper + ".txt"
+svmtestdata = "data/" + browser + "/extracted/t" + paper + ".txt"
 
 train_pathname = svmprocesseddata
 test_pathname = svmtestdata
 
 xtrain, ytrain = get_data(train_pathname)
 
-filename = "data/plot/all-p2.png"
+filename = "data/" + browser + "/plot/all-p" + paper + ".png"
 
 for i in range(25):
     print "Plotting index ", i
-    plotx, ploty = transform(xtrain[20*i], 100)
+    plotx, ploty = transform(xtrain[20*i])
     plt.plot(plotx, ploty)
 
 plt.savefig(filename)
