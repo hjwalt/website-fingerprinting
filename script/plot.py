@@ -9,7 +9,7 @@ from visual.plot import plot, transform
 from sklearn.preprocessing import normalize
 
 browser = "firefox"
-paper = "1"
+paper = "3"
 
 processedpath = "data/" + browser + "/processed"
 svmprocesseddata = "data/" + browser + "/extracted/p" + paper + ".txt"
