@@ -24,9 +24,11 @@ from scipy.spatial.distance import hamming, cityblock, euclidean
 
 from svm.svmTrain import get_data, accuracy
 
-processedpath = "data/firefox/processed"
-svmprocesseddata = "data/firefox/extracted/p3.txt"
-svmtestdata = "data/firefox/extracted/t3.txt"
+browser = "tor"
+
+processedpath = "data/" + browser + "/processed"
+svmprocesseddata = "data/" + browser + "/extracted/p3.txt"
+svmtestdata = "data/" + browser + "/extracted/t3.txt"
 
 # Feature Extration from JSON data
 jsonfiles = [f for f in os.listdir(processedpath) if os.path.isfile(os.path.join(processedpath, f))]

@@ -69,7 +69,7 @@ def parsePcapScapy(filename, sourceAddress, targetAddressList):
         if not included:
             continue
         
-        if(len(pkt.payload) < 60):
+        if(len(pkt.payload) < 61):
             continue
 
         currentConsecutvePacket = consecutiveCount
