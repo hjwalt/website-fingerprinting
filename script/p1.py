@@ -1,4 +1,4 @@
-import os, json, time
+import sys, os, json, time
 
 from feature.cumulativePacket import generateFeature as generateCumulativePacketFeature
 from feature.incomingPacketCount import generateFeature as generateIncomingPacketCountFeature
@@ -7,11 +7,13 @@ from feature.incomingPacketSize import generateFeature as generateIncomingPacket
 from feature.outgoingPacketSize import generateFeature as generateOutgoingPacketSizeFeature
 from svm.svmTrain import svmTrain2, twopowerrange
 
-browser = "firefox"
+browser = "tor"
 
 processedpath = "data/" + browser + "/processed"
 svmprocesseddata = "data/" + browser + "/extracted/p1.txt"
 svmtestdata = "data/" + browser + "/extracted/t1.txt"
+
+sys.stdout = open("p1-" + browser + ".txt", "w+")
 
 # Feature Extration from JSON data
 jsonfiles = [f for f in os.listdir(processedpath) if os.path.isfile(os.path.join(processedpath, f))]

@@ -1,4 +1,4 @@
-import os, json, time
+import sys, os, json, time
 import numpy as np
 from feature.packetSequence import generateFeature as generatePacketSequenceFeature
 
@@ -32,6 +32,8 @@ browser = "tor"
 processedpath = "data/" + browser + "/processed"
 svmprocesseddata = "data/" + browser + "/extracted/p2.txt"
 svmtestdata = "data/" + browser + "/extracted/t2.txt"
+
+sys.stdout = open("p2-" + browser + ".txt", "w+")
 
 # Feature Extration from JSON data
 jsonfiles = [f for f in os.listdir(processedpath) if os.path.isfile(os.path.join(processedpath, f))]
