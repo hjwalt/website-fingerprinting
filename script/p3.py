@@ -24,7 +24,7 @@ from scipy.spatial.distance import hamming, cityblock, euclidean
 
 from svm.svmTrain import get_data, accuracy
 
-browser = "tor"
+browser = "firefox"
 
 processedpath = "data/" + browser + "/processed"
 svmprocesseddata = "data/" + browser + "/extracted/p3.txt"
@@ -52,7 +52,7 @@ with open(svmprocesseddata, 'w') as svmout:
                 data = json.load(f)
 
                 data['packets'] = data['packets'][:sliceSize]
-
+                
                 feature = []
                 feature.extend(generatePacketCountFeature(data))
                 feature.extend(generateIncomingPacketCountFeature(data))

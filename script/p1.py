@@ -7,7 +7,7 @@ from feature.incomingPacketSize import generateFeature as generateIncomingPacket
 from feature.outgoingPacketSize import generateFeature as generateOutgoingPacketSizeFeature
 from svm.svmTrain import svmTrain2, twopowerrange
 
-browser = "tor"
+browser = "firefox"
 
 processedpath = "data/" + browser + "/processed"
 svmprocesseddata = "data/" + browser + "/extracted/p1.txt"
