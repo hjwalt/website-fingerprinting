@@ -8,5 +8,5 @@ instanceCount = 30
 startingIndex = 15
 endingIndex = 16
 
-sniffData(urlpath, className, instanceCount, startingIndex, endingIndex, 30, 60, 600)
+sniffData(urlpath, className, instanceCount, startingIndex, endingIndex, 15, 60, 600)
 
