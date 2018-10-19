@@ -1,0 +1,211 @@
+Extract feature
+Train and test
+Accuracy  8.8 %
+rank            importance                     label                         
+1               0.018918268434620168           Packet Per Second Standard Deviation
+2               0.01822183158061136            Outgoing Packet Ordering Mean 
+3               0.01760854580197044            Packet Per Second Max         
+4               0.016397409890013367           Outgoing Packet Ordering Standard Deviation
+5               0.016025900871009517           Incoming Packet Ordering Mean 
+6               0.015535144696118974           Incoming Packet Ordering Standard Deviation
+7               0.015355941379553664           Outgoing Packet Count         
+8               0.015297560891464071           Outgoing Packet Concentration Mean
+9               0.015061839362457686           Incoming Packet Fraction      
+10              0.014751502851789297           Incoming Packet Count         
+11              0.014612946324082608           Subset 0 Packet Per Second Standard Deviation
+12              0.014522055152615877           Outgoing Packet Fraction      
+13              0.014514318388056925           Packet Per Second Median      
+14              0.014033599534621554           Outgoing Packet Concentration Standard Deviation
+15              0.013903105530029818           Subset 1 Packet Per Second Standard Deviation
+16              0.012619677292525123           Subset 1 Packet Per Second Min
+17              0.012261895769299593           Subset 1 Packet Per Second Max
+18              0.010857700574592115           Subset 0 Packet Per Second Median
+19              0.00954467470688149            Subset 0 Packet Per Second Max
+20              0.009199800962864676           Packet Per Second Min         
+21              0.008832741089307069           Subset 0 Packet Per Second Min
+22              0.008791035200877656           Subset 1 Outgoing Packet Concentration Mean
+23              0.008482792392372828           Subset 1 Outgoing Packet Concentration Max
+24              0.00804971043881588            Subset 1 Outgoing Packet Concentration Median
+25              0.007938153119131208           Subset 1 Packet Per Second Median
+26              0.007927574461009898           Inter Arrival Time Standard Deviation
+27              0.007776847076476526           Inter Arrival Time Mean       
+28              0.007727603214479224           Packet Per Second Mean        
+29              0.007421786174675609           Ending Packet Concentration Outgoing
+30              0.007388964556963475           Ending Packet Concentration Incoming
+31              0.007213507109496225           Subset 7 Outgoing Packet Concentration Mean
+32              0.0071644641508874125          Subset 5 Outgoing Packet Concentration Mean
+33              0.006956134336968162           Subset 3 Outgoing Packet Concentration Median
+34              0.006795633574099945           Subset 17 Outgoing Packet Concentration Max
+35              0.006726830254528565           Subset 19 Outgoing Packet Concentration Median
+36              0.006704052201921395           Subset 7 Outgoing Packet Concentration Median
+37              0.006691602813495622           Subset 17 Outgoing Packet Concentration Mean
+38              0.006676418714857274           Subset 5 Outgoing Packet Concentration Max
+39              0.0066594939094157075          Subset 5 Outgoing Packet Concentration Median
+40              0.006609071392519887           Subset 7 Outgoing Packet Concentration Max
+41              0.0065825708041867895          Subset 19 Outgoing Packet Concentration Mean
+42              0.006558771969415192           Subset 17 Outgoing Packet Concentration Median
+43              0.00652856108219902            Starting Packet Concentration Outgoing
+44              0.006514008940786577           Subset 12 Outgoing Packet Concentration Max
+45              0.00648675502323505            Subset 3 Outgoing Packet Concentration Max
+46              0.006480493785918619           Subset 4 Outgoing Packet Concentration Max
+47              0.006405993944083323           Subset 13 Outgoing Packet Concentration Mean
+48              0.006385342814014049           Starting Packet Concentration Incoming
+49              0.006355829151131234           Subset 12 Outgoing Packet Concentration Median
+50              0.006348543526900246           Subset 16 Outgoing Packet Concentration Mean
+51              0.006324107482458409           Subset 16 Outgoing Packet Concentration Median
+52              0.006311795173220544           Subset 13 Outgoing Packet Concentration Median
+53              0.006297533395597096           Subset 9 Outgoing Packet Concentration Max
+54              0.006296633097001289           Subset 19 Outgoing Packet Concentration Max
+55              0.006285913931629644           Subset 16 Outgoing Packet Concentration Max
+56              0.006279838858576131           Subset 12 Outgoing Packet Concentration Mean
+57              0.006268074763167989           Subset 10 Outgoing Packet Concentration Mean
+58              0.00622912211330691            Subset 8 Outgoing Packet Concentration Max
+59              0.006222724108823503           Subset 4 Outgoing Packet Concentration Mean
+60              0.006212454312923798           Subset 10 Outgoing Packet Concentration Max
+61              0.006203444348526459           Subset 4 Outgoing Packet Concentration Median
+62              0.006181486213495936           Subset 2 Outgoing Packet Concentration Mean
+63              0.00616534308308388            Subset 14 Outgoing Packet Concentration Median
+64              0.006132798426750519           Subset 8 Outgoing Packet Concentration Median
+65              0.006123281807562089           Subset 2 Outgoing Packet Concentration Median
+66              0.006118826297694731           Subset 18 Outgoing Packet Concentration Mean
+67              0.006117713236289208           Subset 9 Outgoing Packet Concentration Mean
+68              0.00611300998478401            Subset 10 Outgoing Packet Concentration Median
+69              0.006108457476017712           Subset 2 Packet Per Second Standard Deviation
+70              0.006044908462831808           Subset 8 Outgoing Packet Concentration Mean
+71              0.006025774298363495           Subset 11 Outgoing Packet Concentration Mean
+72              0.006015891611107545           Subset 3 Outgoing Packet Concentration Mean
+73              0.006009958497055436           Subset 14 Outgoing Packet Concentration Mean
+74              0.006006041128668161           Subset 14 Outgoing Packet Concentration Max
+75              0.005988297183023849           Subset 11 Outgoing Packet Concentration Max
+76              0.00596846163785609            Subset 9 Outgoing Packet Concentration Median
+77              0.005945656574571341           Subset 13 Outgoing Packet Concentration Max
+78              0.005920221421143202           Subset 2 Outgoing Packet Concentration Max
+79              0.0058606648155885965          Subset 0 Packet Per Second Mean
+80              0.005826777460133535           Subset 18 Outgoing Packet Concentration Median
+81              0.0057875593933517525          Subset 15 Outgoing Packet Concentration Mean
+82              0.005783213410617042           Subset 2 Packet Per Second Min
+83              0.005780203100037828           Subset 18 Outgoing Packet Concentration Max
+84              0.005715266569662366           Subset 15 Outgoing Packet Concentration Max
+85              0.005666651716878902           Subset 15 Outgoing Packet Concentration Median
+86              0.005608816513473441           Subset 11 Outgoing Packet Concentration Median
+87              0.005532322933275088           Subset 6 Outgoing Packet Concentration Median
+88              0.005499288420584585           Subset 6 Outgoing Packet Concentration Max
+89              0.005467373243819508           Subset 6 Outgoing Packet Concentration Mean
+90              0.0053848099740715395          Subset 4 Packet Per Second Max
+91              0.005099124456770442           Subset 2 Packet Per Second Max
+92              0.004942912619757219           Subset 3 Packet Per Second Min
+93              0.004903339102596854           Subset 1 Packet Per Second Mean
+94              0.004764955132801939           Subset 4 Packet Per Second Standard Deviation
+95              0.004756487794872318           Subset 4 Packet Per Second Min
+96              0.004700321864289322           Subset 3 Packet Per Second Standard Deviation
+97              0.004625125225349843           Subset 0 Outgoing Packet Concentration Max
+98              0.004462933327372831           Subset 0 Outgoing Packet Concentration Median
+99              0.0043998301643073875          Outgoing Packet Concentration Max
+100             0.004278187181366575           Subset 3 Packet Per Second Max
+101             0.004261740514563121           Subset 0 Outgoing Packet Concentration Mean
+102             0.0037610787443592155          Subset 9 Packet Per Second Max
+103             0.003753267241633694           Subset 9 Packet Per Second Min
+104             0.0037141723304229993          Subset 9 Packet Per Second Standard Deviation
+105             0.0036888497051795516          Subset 6 Packet Per Second Min
+106             0.003667788491960103           Subset 19 Packet Per Second Standard Deviation
+107             0.003635722875408685           Subset 19 Packet Per Second Max
+108             0.0036052340547266344          Subset 7 Packet Per Second Standard Deviation
+109             0.003566144768397491           Subset 19 Packet Per Second Min
+110             0.00355244186923411            Subset 7 Packet Per Second Max
+111             0.0035447621338962516          Subset 18 Packet Per Second Max
+112             0.0035046863160105622          Subset 6 Packet Per Second Standard Deviation
+113             0.0034828201130347137          Subset 7 Packet Per Second Min
+114             0.0033134763962796637          Subset 15 Packet Per Second Min
+115             0.0032498318978865927          Subset 15 Packet Per Second Standard Deviation
+116             0.0032468451897148987          Outgoing Packet Concentration Median
+117             0.0031895785172353142          Subset 18 Packet Per Second Min
+118             0.0031874874212057406          Subset 6 Packet Per Second Max
+119             0.0031034097083859585          Subset 12 Packet Per Second Min
+120             0.003102493901393478           Subset 8 Packet Per Second Min
+121             0.0030899992490198767          Subset 11 Packet Per Second Min
+122             0.0030895657070583956          Subset 8 Packet Per Second Max
+123             0.003086312300935039           Subset 18 Packet Per Second Standard Deviation
+124             0.003058399286108869           Subset 5 Packet Per Second Min
+125             0.0030413196154376403          Subset 15 Packet Per Second Max
+126             0.0030399458284618677          Subset 14 Packet Per Second Min
+127             0.002979018529597474           Subset 5 Packet Per Second Max
+128             0.0029575630599708346          Subset 8 Packet Per Second Standard Deviation
+129             0.002955463761182194           Subset 5 Packet Per Second Standard Deviation
+130             0.00290360987405318            Subset 12 Packet Per Second Standard Deviation
+131             0.0028763699093468644          Subset 14 Packet Per Second Max
+132             0.0028722981057415966          Subset 14 Packet Per Second Standard Deviation
+133             0.002868152474057702           Subset 16 Packet Per Second Max
+134             0.0027727058117008236          Subset 16 Packet Per Second Min
+135             0.002738438080730087           Subset 11 Packet Per Second Max
+136             0.002708919177708277           Subset 12 Packet Per Second Max
+137             0.002697968077097393           Subset 13 Packet Per Second Max
+138             0.002655763645474042           Subset 16 Packet Per Second Standard Deviation
+139             0.002608000890215842           Subset 11 Packet Per Second Standard Deviation
+140             0.002576586535660676           Subset 17 Packet Per Second Min
+141             0.002543249820902906           Subset 4 Packet Per Second Mean
+142             0.0025421867051115795          Subset 4 Packet Per Second Median
+143             0.002502479596061449           Subset 2 Packet Per Second Median
+144             0.0024976493981857125          Subset 2 Packet Per Second Mean
+145             0.002436844828487626           Subset 13 Packet Per Second Standard Deviation
+146             0.002411748235099996           Subset 10 Packet Per Second Standard Deviation
+147             0.0023263147615116444          Subset 10 Packet Per Second Max
+148             0.0022779993598544997          Subset 13 Packet Per Second Min
+149             0.0022614716545232656          Subset 7 Packet Per Second Median
+150             0.002254702722804985           Subset 17 Packet Per Second Standard Deviation
+151             0.002244111223010526           Subset 10 Packet Per Second Min
+152             0.00216138865705236            Subset 3 Packet Per Second Median
+153             0.0021448126495743403          Subset 7 Packet Per Second Mean
+154             0.0021421816456366257          Subset 6 Packet Per Second Median
+155             0.002126258627243495           Subset 17 Packet Per Second Max
+156             0.002120848585059623           Subset 6 Packet Per Second Mean
+157             0.002112124693785378           Subset 9 Packet Per Second Mean
+158             0.0021111249915513504          Subset 9 Packet Per Second Median
+159             0.002058049103784992           Subset 3 Packet Per Second Mean
+160             0.002038400883617498           Subset 19 Packet Per Second Median
+161             0.002014587125424223           Subset 19 Packet Per Second Mean
+162             0.001956771460335062           Subset 18 Packet Per Second Mean
+163             0.0018795457200564722          Subset 8 Packet Per Second Mean
+164             0.0018781224425211825          Subset 5 Packet Per Second Median
+165             0.0018327503255280884          Subset 18 Packet Per Second Median
+166             0.001760562972869494           Subset 15 Packet Per Second Mean
+167             0.0016711028154778671          Subset 11 Packet Per Second Mean
+168             0.001658189940541168           Subset 5 Packet Per Second Mean
+169             0.0016438918247082192          Subset 8 Packet Per Second Median
+170             0.001636648424908335           Subset 16 Packet Per Second Mean
+171             0.0016263342359714636          Subset 15 Packet Per Second Median
+172             0.0016111271866089884          Subset 16 Packet Per Second Median
+173             0.0014748040413078843          Subset 13 Packet Per Second Median
+174             0.001467295381241429           Subset 11 Packet Per Second Median
+175             0.0014591259870610077          Subset 10 Packet Per Second Median
+176             0.0014464990492730812          Subset 12 Packet Per Second Median
+177             0.0014374505982508079          Subset 14 Packet Per Second Mean
+178             0.0014129047079283782          Subset 12 Packet Per Second Mean
+179             0.001410157121404761           Subset 17 Packet Per Second Mean
+180             0.0014029501762012973          Subset 14 Packet Per Second Median
+181             0.0014023796579689402          Subset 17 Packet Per Second Median
+182             0.0013806938597736797          Subset 13 Packet Per Second Mean
+183             0.0013521848389662328          Subset 10 Packet Per Second Mean
+184             0.0009727992864669632          Inter Arrival Time Max        
+185             0.0                            Total Packet Count            
+186             0.0                            Subset 0 Outgoing Packet Concentration Standard Deviation
+187             0.0                            Subset 1 Outgoing Packet Concentration Standard Deviation
+188             0.0                            Subset 2 Outgoing Packet Concentration Standard Deviation
+189             0.0                            Subset 3 Outgoing Packet Concentration Standard Deviation
+190             0.0                            Subset 4 Outgoing Packet Concentration Standard Deviation
+191             0.0                            Subset 5 Outgoing Packet Concentration Standard Deviation
+192             0.0                            Subset 6 Outgoing Packet Concentration Standard Deviation
+193             0.0                            Subset 7 Outgoing Packet Concentration Standard Deviation
+194             0.0                            Subset 8 Outgoing Packet Concentration Standard Deviation
+195             0.0                            Subset 9 Outgoing Packet Concentration Standard Deviation
+196             0.0                            Subset 10 Outgoing Packet Concentration Standard Deviation
+197             0.0                            Subset 11 Outgoing Packet Concentration Standard Deviation
+198             0.0                            Subset 12 Outgoing Packet Concentration Standard Deviation
+199             0.0                            Subset 13 Outgoing Packet Concentration Standard Deviation
+200             0.0                            Subset 14 Outgoing Packet Concentration Standard Deviation
+201             0.0                            Subset 15 Outgoing Packet Concentration Standard Deviation
+202             0.0                            Subset 16 Outgoing Packet Concentration Standard Deviation
+203             0.0                            Subset 17 Outgoing Packet Concentration Standard Deviation
+204             0.0                            Subset 18 Outgoing Packet Concentration Standard Deviation
+205             0.0                            Subset 19 Outgoing Packet Concentration Standard Deviation
+206             0.0                            Inter Arrival Time 75 Percentile
+Training time:  0  hours,  0  minutes,  24  seconds

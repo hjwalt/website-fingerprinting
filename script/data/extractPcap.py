@@ -96,6 +96,9 @@ def parsePcapScapy(filename, sourceAddress, targetAddressList):
         }
 
         packets.append(row)
+
+        if(requestCount + responseCount > 2000):
+            break
     
     data = {
         'packets' : packets,

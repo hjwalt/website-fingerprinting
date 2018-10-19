@@ -5,8 +5,8 @@ from tbselenium.tbdriver import TorBrowserDriver
 urlpath = "data/urls.txt"
 className = "facebook"
 instanceCount = 30
-startingIndex = 21
-endingIndex = 25
+startingIndex = 15
+endingIndex = 16
 
-sniffTor(urlpath, className, instanceCount, startingIndex, endingIndex, 30, 60, 600)
+sniffData(urlpath, className, instanceCount, startingIndex, endingIndex, 30, 60, 600)
 

@@ -1,6 +1,6 @@
 from data.extractPcap import parseAndGenerateJson
 
-browser = "tor"
+browser = "firefox"
 
 path = "data/" + browser + "/raw"
 processedpath = "data/" + browser + "/processed"
