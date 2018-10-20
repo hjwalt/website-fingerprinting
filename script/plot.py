@@ -8,7 +8,7 @@ from visual.plot import plot, transform
 
 from sklearn.preprocessing import normalize
 
-browser = "firefox"
+browser = "tor"
 paper = "3"
 
 processedpath = "data/" + browser + "/processed"
@@ -64,6 +64,17 @@ for j in range(25):
     for i in range(20):
         plotx, ploty = transform(xtrain[(20 * j) + i])
         plt.plot(plotx, ploty)
+
+    plt.savefig(filename)
+    plt.clf()
+
+# Plot one class one data
+xtrain, ytrain = get_data(train_pathname)
+for j in range(25):
+    print "Plotting index ", j
+    filename = "data/" + browser + "/plot/p" + paper + "-c" + str(j) + "-i0.png"
+    plotx, ploty = transform(xtrain[(20 * j)])
+    plt.plot(plotx, ploty)
 
     plt.savefig(filename)
     plt.clf()
