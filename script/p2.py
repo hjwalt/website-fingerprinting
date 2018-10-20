@@ -27,7 +27,7 @@ def proxy_kernel(X, Y, K=radial_basis):
             gram_matrix[i, j] = K(x, y)
     return gram_matrix
 
-browser = "tor"
+browser = "firefox"
 
 processedpath = "data/" + browser + "/processed"
 svmprocesseddata = "data/" + browser + "/extracted/p2.txt"
